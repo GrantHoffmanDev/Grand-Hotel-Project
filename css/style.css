@@ -1,0 +1,998 @@
+/* common styles */
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.smallUnderline {
+  width: 9rem;
+  height: .1rem;
+  background-color: #b85d1c;
+  margin: 0 auto 1rem auto;
+}
+
+.bigUnderline {
+  width: 20rem;
+  height: .1rem;
+  background-color: #b85d1c;
+  margin: auto;
+}
+
+/* end of common styles */
+/* Navbar */
+/* Sidebar */
+.sidebar {
+  width: 8rem;
+  height: 100%;
+  background-color: #eee;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
+.sidebar .menuIcon {
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.sidebar .menuIcon .line {
+  height: .2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: .6rem;
+}
+
+.sidebar .menuIcon .line-1,
+.sidebar .menuIcon .line-3 {
+  width: 1.8rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.sidebar .menuIcon:hover .line {
+  width: 2.5rem;
+}
+
+.socialIconsList {
+  list-style: none;
+  padding: 0;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socialIconsList .socialLink {
+  font-size: 2rem;
+  color: #777;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.socialIconsList .socialLink:hover {
+  color: #deaa86;
+}
+
+.year {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+/* End of Sidebar */
+/* Navigation */
+.navigation {
+  left: -32rem;
+  position: fixed;
+  width: 40rem;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#222029), to(rgba(34, 32, 41, 0.8))), url(../img/nav-bg.jpeg) center no-repeat;
+  background: linear-gradient(to top, #222029, rgba(34, 32, 41, 0.8)), url(../img/nav-bg.jpeg) center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+  z-index: 5;
+}
+
+.navigation .navHeading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: .2rem;
+  color: #deaa86;
+  text-align: center;
+}
+
+.navigation .navSearch {
+  position: relative;
+}
+
+.navigation .navSearch .navSearchInput {
+  width: 30rem;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.6rem;
+  color: #deaa86;
+  letter-spacing: .1rem;
+  outline: none;
+  border: .1rem solid #555;
+  border-radius: 10rem;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.navigation .navSearch .navSearchInput:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navigation .navSearch .navSearchBtn {
+  border: none;
+  background-color: transparent;
+  color: #deaa86;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.navigation .navSearch .navSearchBtn:focus {
+  outline: none;
+}
+
+.navigation .navList {
+  list-style: none;
+  padding: 0;
+  height: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation .navList .navItem {
+  position: relative;
+}
+
+.navigation .navList .navItem .navLink {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.navigation .navList .navItem .navLink::before {
+  content: '';
+  width: 0rem;
+  height: .1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  left: -4rem;
+  -webkit-transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation .navList .navItem .navLink::before:hover {
+  width: 3rem;
+}
+
+.navigation .navList .navItem .navLink::after {
+  content: '';
+  width: 0rem;
+  height: .1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+  -webkit-transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation .navList .navItem .navLink:hover {
+  color: #deaa86;
+}
+
+.navigation .navList .navItem .navLink:hover::before, .navigation .navList .navItem .navLink:hover::after {
+  width: 3rem;
+}
+
+.navigation .copyright {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox:checked ~ .navigation {
+  left: 8rem;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+  -webkit-transform: rotate(-405deg) translate(-5px, 6px);
+          transform: rotate(-405deg) translate(-5px, 6px);
+  width: 2.5rem;
+}
+
+.checkbox:checked ~ .sidebar .line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+  -webkit-transform: rotate(405deg) translate(-5px, -6px);
+          transform: rotate(405deg) translate(-5px, -6px);
+  width: 2.5rem;
+}
+
+/* End of Navigation */
+/* End of Navbar */
+/* Header */
+.header {
+  margin-left: 8rem;
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.5))), url(../img/header-1.jpeg) center no-repeat;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(../img/header-1.jpeg) center no-repeat;
+  background-size: cover;
+}
+
+.header .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.header .hotelHeading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #deaa86;
+  letter-spacing: .2rem;
+}
+
+.header .banner {
+  color: #ddd;
+  height: 65rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .banner .bannerHeading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 7rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  -webkit-animation: anim 2s;
+          animation: anim 2s;
+}
+
+.header .banner .bannerParagraph {
+  font-size: 3.5rem;
+  font-weight: 300;
+  -webkit-animation: anim 1.5s .5s backwards;
+          animation: anim 1.5s .5s backwards;
+}
+
+.header .banner .bannerBtn {
+  width: 21rem;
+  padding: 1.2rem 2rem;
+  font-size: 2rem;
+  color: #333;
+  letter-spacing: .1rem;
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  background: -webkit-gradient(linear, left top, right top, from(gold), to(goldenrod));
+  background: linear-gradient(to right, gold, goldenrod);
+  cursor: pointer;
+  -webkit-animation: anim 1s 1s backwards;
+          animation: anim 1s 1s backwards;
+}
+
+.header .banner .bannerBtn:hover {
+  background: -webkit-gradient(linear, right top, left top, from(gold), to(goldenrod));
+  background: linear-gradient(to left, gold, goldenrod);
+}
+
+.header .banner .bannerBtn:active {
+  -webkit-transform: translateY(0.2rem);
+          transform: translateY(0.2rem);
+}
+
+/* End of Header */
+/* About Us */
+.aboutUs {
+  margin-left: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ddd;
+}
+
+.aboutUs .aboutUsContent {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.aboutUs .aboutUsContent .aboutUsHeading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.aboutUs .aboutUsContent .subHeading {
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: .2rem;
+  color: #b85d1c;
+}
+
+.aboutUs .aboutUsContent .aboutUsParagraph {
+  font-weight: 300;
+  font-size: 1.6rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.aboutUs .aboutUsContent .aboutUsBtn {
+  width: 15rem;
+  padding: .7rem .5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #b85d1c;
+  background-color: transparent;
+  border: .1rem solid #b85d1c;
+  outline: none;
+  cursor: pointer;
+}
+
+.aboutUs .aboutUsContent .aboutUsBtn .btnArrow {
+  margin-left: .5rem;
+  -webkit-transition: margin-left .4s;
+  transition: margin-left .4s;
+}
+
+.aboutUs .aboutUsContent .aboutUsBtn:hover .btnArrow {
+  margin-left: 1.5rem;
+}
+
+.aboutUs .aboutUsImages {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  position: relative;
+}
+
+.aboutUs .aboutUsImages .image {
+  width: 32rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+  border-radius: .4rem;
+  border: .2rem solid #b85d1c;
+}
+
+.aboutUs .aboutUsImages .image-1 {
+  -webkit-transform: translate(-20%, -90%);
+          transform: translate(-20%, -90%);
+}
+
+.aboutUs .aboutUsImages .image-2 {
+  -webkit-transform: translate(-70%, -70%);
+          transform: translate(-70%, -70%);
+}
+
+.aboutUs .aboutUsImages .image-3 {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.aboutUs .aboutUsImages .image-4 {
+  -webkit-transform: translate(-30%, -30%);
+          transform: translate(-30%, -30%);
+}
+
+/* End of About Us */
+/* Common Header */
+.commonHeader {
+  padding: 5rem;
+  text-align: center;
+  color: #b85d1c;
+}
+
+.commonHeading {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: .2rem;
+}
+
+/* End of Common Header */
+/* Rooms */
+.rooms {
+  margin-left: 8rem;
+}
+
+.rooms .roomsCardsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rooms .roomsCardsWrapper .roomCard {
+  width: 60rem;
+  margin: 5rem;
+  background-color: #15141b;
+  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+.rooms .roomsCardsWrapper .roomCard .roomImg {
+  width: 100%;
+}
+
+.rooms .roomsCardsWrapper .roomCard .roomCardContent {
+  color: #ddd;
+  padding: 2rem;
+}
+
+.rooms .roomsCardsWrapper .roomCard .roomCardContent .roomCardHeading {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.rooms .roomsCardsWrapper .roomCard .roomCardContent .roomCardParagraph {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+.rooms .roomsCardsWrapper .roomCard .roomCardContent .roomPrice {
+  font-size: 5rem;
+  font-weight: 300;
+  text-align: right;
+  margin: 0;
+}
+
+.rooms .roomsCardsWrapper .roomCard .roomCardContent .roomCardBtn {
+  width: 15rem;
+  padding: 1.5rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #b85d1c;
+  background-color: transparent;
+  border: .1rem solid #b85d1c;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10rem;
+}
+
+.rooms .roomsCardsWrapper .roomCard .roomCardContent .roomCardBtn .btnArrow {
+  margin-left: .5rem;
+  -webkit-transition: margin-left .4s;
+  transition: margin-left .4s;
+}
+
+.rooms .roomsCardsWrapper .roomCard .roomCardContent .roomCardBtn:hover .btnArrow {
+  margin-left: 1.5rem;
+}
+
+.rooms .roomsBtnWrapper {
+  text-align: center;
+}
+
+.rooms .roomsBtnWrapper .roomsBtn {
+  width: 20rem;
+  padding: 1.5rem 1rem;
+  margin: 4rem 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #b85d1c;
+  border: .2rem solid #b85d1c;
+  outline: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.rooms .roomsBtnWrapper .roomsBtn:hover {
+  color: #ddd;
+  background-color: #b85d1c;
+}
+
+/* End of Rooms */
+/* Customers */
+.customers {
+  margin-left: 8rem;
+  padding-bottom: 7rem;
+  background-color: #15141b;
+}
+
+.customers .customersParagraph {
+  font-size: 1.8rem;
+  color: #ddd;
+  width: 50%;
+  margin: 2rem auto 8rem auto;
+  text-align: center;
+}
+
+.customers .customersCardWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.customers .customersCardWrapper .customerCard {
+  background-color: #eee;
+  width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.customers .customersCardWrapper .customerCard .customerImgWrapper {
+  margin: auto 0;
+}
+
+.customers .customersCardWrapper .customerCard .customerImgWrapper .customerImg {
+  width: 20rem;
+  margin-left: -1.3rem;
+}
+
+.customers .customersCardWrapper .customerCard .customerInfo {
+  padding: 0 2rem;
+}
+
+.customers .customersCardWrapper .customerCard .customerInfo .customerName {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.customers .customersCardWrapper .customerCard .customerInfo .customerParagraph-1 {
+  font-size: 1rem;
+  font-style: italic;
+  color: #b85d1c;
+}
+
+.customers .customersCardWrapper .customerCard .customerInfo .customerParagraph-2 {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+/* End of Customers */
+/* Footer */
+.footer {
+  margin-left: 8rem;
+}
+
+.footer .mainPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #1c1c1c;
+  padding: 4rem;
+}
+
+.footer .mainPart .footerHeading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: goldenrod;
+  margin: 1rem 0 3rem 0;
+}
+
+.footer .mainPart .footerList {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .mainPart .footerList .footerListItem {
+  margin-bottom: 2rem;
+}
+
+.footer .mainPart .footerList .footerListLink {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #bbb;
+}
+
+.footer .mainPart .contact {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-bottom: 4rem;
+}
+
+.footer .mainPart .contact .footerForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .mainPart .contact .footerForm .footerInput {
+  width: 25rem;
+  padding: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.8rem;
+  color: #444;
+  outline: none;
+}
+
+.footer .mainPart .contact .footerForm .footerBtn {
+  padding: 1rem;
+  background-color: #b85d1c;
+  color: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.footer .mainPart .gallery {
+  max-width: 45rem;
+}
+
+.footer .mainPart .gallery .galleryImgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .mainPart .gallery .galleryImgs .imgWrapper {
+  width: 12rem;
+  margin: .4rem;
+  overflow: hidden;
+}
+
+.footer .mainPart .gallery .galleryImgs .footerImg {
+  width: 100%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.footer .mainPart .gallery .galleryImgs .footerImg:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  opacity: .8;
+}
+
+.footer .creatorPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #111;
+  padding: 0 4rem;
+}
+
+.footer .creatorPart .copyrightText {
+  font-size: 1.3rem;
+  color: #aaa;
+}
+
+.footer .creatorPart .textRight {
+  font-size: 1.4rem;
+  color: #bbb;
+}
+
+.footer .creatorPart .textRight i {
+  font-size: 2rem;
+  margin: .5rem;
+  color: tomato;
+}
+
+.footer .creatorPart .textRight span {
+  color: gold;
+}
+
+/* End of Footer */
+/* Responsive */
+@media (max-width: 1400px) {
+  .customersCardWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .customersCardWrapper .customerCard:first-child {
+    margin-bottom: 3rem;
+  }
+  .mainPart {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mainPart .footerList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mainPart .footerList .footerListItem {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .aboutUs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 20rem;
+  }
+  .aboutUs .aboutUsContent {
+    margin-bottom: 13rem;
+  }
+  .aboutUs .aboutUsImages .image {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header .banner {
+    text-align: center;
+  }
+  .header .banner .bannerHeading {
+    font-size: 4.7rem;
+  }
+  .header .banner .bannerParagraph {
+    font-size: 2.6rem;
+  }
+  .header .banner .bannerBtn {
+    width: 16rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .customers .customersCardWrapper .customerCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30rem;
+  }
+  .customers .customersCardWrapper .customerCard .customerImgWrapper .customerImg {
+    margin-left: 0;
+    width: 30rem;
+  }
+  .mainPart .footerList {
+    display: block;
+  }
+  .creatorPart {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .creatorPart .copyrightText {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .navigation {
+    width: 28rem;
+  }
+  .navigation .navSearch .navSearchInput {
+    width: 20rem;
+  }
+  .header .hotelHeading {
+    font-size: 2rem;
+    margin: auto 0;
+  }
+  .header .banner {
+    height: 100%;
+    margin-top: -10rem;
+  }
+  .header .banner .bannerHeading {
+    font-size: 3rem;
+  }
+  .header .banner .bannerParagraph {
+    font-size: 2rem;
+  }
+  .aboutUs {
+    padding-bottom: 15rem;
+  }
+  .aboutUs .aboutUsContent {
+    padding: 5rem;
+  }
+  .aboutUs .aboutUsContent .aboutUsHeading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .aboutUs .aboutUsContent .subHeading {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .aboutUs .aboutUsImages .image {
+    width: 13rem;
+  }
+  .commonHeading {
+    font-size: 2rem;
+  }
+  .smallUnderline {
+    width: 5rem;
+  }
+  .bigUnderline {
+    width: 12rem;
+  }
+  .rooms .roomsCardsWrapper .roomCard {
+    margin: 5rem 0;
+  }
+  .rooms .roomsCardsWrapper .roomCard:last-child {
+    margin: 5rem 0 0 0;
+  }
+  .rooms .roomsCardsWrapper .roomCard .roomCardContent .roomCardHeading {
+    font-size: 1.5rem;
+  }
+  .rooms .roomsCardsWrapper .roomCard .roomCardContent .roomPrice {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  .rooms .roomsCardsWrapper .roomCard .roomCardContent .roomCardBtn {
+    width: 12rem;
+    padding: 1rem .5rem;
+    font-size: 1rem;
+  }
+  .customers .customersParagraph {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+  .customers .customersCardWrapper .customerCard {
+    width: 20rem;
+  }
+  .customers .customersCardWrapper .customerCard .customerImgWrapper .customerImg {
+    width: 20rem;
+  }
+  .footer .mainPart {
+    padding: 2rem;
+  }
+  .footer .mainPart .contact .footerForm .footerInput {
+    width: 12rem;
+  }
+  .footer .mainPart .gallery .galleryImgs .imgWrapper {
+    width: 9rem;
+  }
+}
+
+/* End of Responsive */
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
